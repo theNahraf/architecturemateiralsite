@@ -1,38 +1,381 @@
-.App {
+
+
+* , body, html{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+  color: #1e1b1b;
+}
+
+p {
+
+  color: #1c1b1b;
+
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.col-2 img {
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+
+.col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: rgb(24, 24, 224);
+  color: #fff;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: #0303b7;
+}
+
+.header {
+  background: radial-gradient(#fff, #5993f7);
+
+}
+
+.header .row {
+  margin-top: 70px;
+}
+
+.categories {
+  margin: 0px 0;
+}
+
+.categories {
+  background: radial-gradient(#fff, #5993f7);
+
+}
+
+.col-3 {
+  flex-basis: 30%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.5s;
+}
+
+.col-3 img {
+  width: 100%;
+}
+
+.title {
+  font-size: 35px;
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: black;
+}
+
+.title::after {
+  content: '';
+  background: rgb(24, 24, 224);
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.col-3 h4 {
+  text-align: center;
+  color: black;
+}
+
+
+.col-3 p {
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.col-3:hover {
+  transform: translateY(-15px);
+
+}
+
+.col-3 {
+  background: radial-gradient(#fff, #2e77f5);
+
+}
+
+.slideshow-container {
+  width: 100vw;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.slide img {
+  max-width: 100%;
+  /* Set the maximum width of the image to 100% of the slideshow container */
+  max-height: 100%;
+  /* Set the maximum height of the image to 100% of the slideshow container */
+  width: auto;
+  /* Ensure the image maintains its aspect ratio */
+  height: auto;
+  /* Ensure the image maintains its aspect ratio */
+  object-fit: contain;
+  /* Fit the image within the container while preserving its aspect ratio */
+}
+
+.active {
+  display: block;
+}
+
+.faq-section {
+
+
+  padding: 20px;
+  background: radial-gradient(#d8e5fd, #6097f8);
+  max-width: 1800px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.question {
+  margin: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  border-radius: 22px;
+
+}
+
+.plus-sign {
+  margin-right: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  font-size: larger;
+  background: radial-gradient(#fff, #2e77f5);
+}
+
+.question.active .plus-sign {
+  transform: rotate(45deg);
+}
+
+.answer {
+  display: none;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-style: double;
+  border-color: #f9f9f9;
+  border-width: 6px;
+  background: radial-gradient(#fff, #7eacf9);
+}
+
+.answer p {
+  margin: 0;
+  color: black;
+}
+
+.contain img {
+  width: 100%;
+ 
+
+}
+
+.butn {
+   width: 300px;
+  height: 50px; 
+  background: rgb(24, 24, 224);
+  color: #fff;
+  padding: 8px 30px;
+  margin: 30px auto;
+  border-radius: 30px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.butn:hover {
+  background: #0303b7;
+}
+
+/* footer */
+.footer{
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+.footer p{
+  color: #f1f1f1;
+}
+.footer h3{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2,.footer-col-3, .footer-col-4{
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+.footer-col-1{
+  flex-basis: 30%;
+}
+.footer-col-2{
+  flex: 1;
+  text-align: center;
+}
+.footer-col-2 img{
+  width: 180px;
+  margin-bottom: 20px;
+}
+.footer-col-3,.footer-col-4{
+  flex-basis: 12%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul{
+  list-style-type: none;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* pop animation  */
+/* Add this to your CSS file or styles */
+@keyframes pop-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pop-animation {
+  animation: pop-in 0.4s ease-out;
+}
+
+
+
+
+/* about animation  */
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slidee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: fade 15s infinite;
+  opacity: 0;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide:nth-child(2) {
+  animation-delay: 5s;
+}
+.slide:nth-child(3) {
+  animation-delay: 10s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* light box  */
+/* Custom styles for the Lightbox */
+.react-image-lightbox .ril-image-current {
+  max-width: 90%; /* Adjust width dynamically */
+  max-height: 80vh; /* Limit height to viewport */
+  object-fit: contain; /* Ensure the image doesn't stretch */
+  margin: auto; /* Center the image */
+}
+
+/* Make the Lightbox image responsive */
+.ril-image-current {
+  max-width: 90%; /* Limit the image width to 90% of the viewport */
+  max-height: 80vh; /* Limit the image height to 80% of the viewport */
+  object-fit: contain; /* Ensure the aspect ratio is preserved */
+}
+
+/* Adjust Lightbox container for responsiveness */
+.ril-outer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center;
 }
